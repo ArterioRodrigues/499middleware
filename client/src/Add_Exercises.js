@@ -1,7 +1,7 @@
 import React, {useState, useEffect,Compnent} from 'react';
 import Autosuggest from 'react-autosuggest';
 import { Link } from "react-router-dom";
-import Nav from './/NavBar/NavBar'
+import Nav from './Components/NavBar/NavBar'
 
 function Add_Exercises(props) {
     const [exercises, setExercises] = useState(false);

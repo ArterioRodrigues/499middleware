@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from "react-router-dom";
-import Quiz from "./Quiz/Quiz"
+import { Link,  useNavigate } from "react-router-dom";
+import * as AiIcons from "react-icons/ai";
 function Register(props) {
   const [username, setUsername] = useState([{}]);
   const [password, setPassword] = useState([{}]);
   const [name, setName] = useState([{}]);
   const [secondBackendData, setSecondBackendData] = useState([{}])
+  const navigate = useNavigate();
 /*
   const [exercise_category, set] = useState([{}]);
   const [password, setPassword] = useState([{}]);
@@ -35,37 +36,27 @@ function Register(props) {
     console.log(typeof num,num);
     props.setId(num);
     console.log(props.id);
+    navigate("/Quiz")
   }
   return (
-    <div>
-         <h1>register</h1>
-      <form onSubmit={HandleSubmit}>
-          
-        <label>
-          Enter username: <input type="text" onChange={e => setUsername(e.target.value)}/>
-        </label>
-        <label>
-          Enter password: <input type="text" onChange={e => setPassword(e.target.value)}/>
-        </label>
-        <label>
-          Enter name: <input type="text" onChange={e => setName(e.target.value)}/>
-        </label>
-        <input type="submit" value="Submit"></input>
-      </form>
-      <Quiz></Quiz>
-      <Link to = {'/newExercise'}>
-        <h1>Add New Exercise</h1>
-      </Link>
-      
-      <Link to = {'/profile'}>
-        <h1>User Profile</h1>
-      </Link>
-      <Link to = {'/'}>
-        <h1>User Recommendations</h1>
-      </Link>
-     
+    <div className='background'>
+      <div className='card'>
+         <h1>REGISTER</h1>
+          <AiIcons.AiOutlineUser className='LoginIcon'/>
+          <form onSubmit={HandleSubmit}>
+            <input className = 'login-menu username' placeholder= 'Username' type="text" onChange={e => setUsername(e.target.value)}/>
+            <input className = 'login-menu' placeholder = 'Password'type="text" onChange={e => setPassword(e.target.value)}/>
+            <input className = 'login-menu password'  placeholder = 'Name' type="text" onChange={e => setName(e.target.value)}/>
+           
+            <input className = 'Login'  type="Submit" value="Register"></input>
+          </form>
+      </div>
     </div>
   )
 }
 
 export default Register;
+
+
+
+

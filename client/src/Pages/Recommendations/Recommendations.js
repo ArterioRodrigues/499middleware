@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import './style.css'
+
 import { Link } from "react-router-dom";
-import Nav from './/NavBar/NavBar'
+import Nav from '../../Components/NavBar/NavBar'
 
 
 function Recommendations(props) {
