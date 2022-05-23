@@ -51,7 +51,7 @@ h1{
     border-radius: 5px;
 }
 
-.Login.hover, .Login.active{
+.Login:hover, .Login.active{
     cursor: pointer;
     background-color:hotpink;
 }

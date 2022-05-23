@@ -6,7 +6,6 @@
 
 .Profile_content{
     padding-left:250px;
-    background-color: red;
 }
 
 .Profile{
@@ -37,11 +36,12 @@
 }
 
 .UserName{
-    position: relative;
+    padding: 10px 50px;
     bottom: 30px;
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
+    width: 100%;
 }
 
 .Head{
@@ -69,4 +69,23 @@
 
 .form_grid{
     display: grid;
+}
+
+.from_submit{
+    width: 25%;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px
+}
+
+
+.from_submit:hover{
+    cursor: pointer;
+    background-color:blue;
 }

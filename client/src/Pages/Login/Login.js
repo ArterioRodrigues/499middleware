@@ -41,7 +41,7 @@ function Login(props) {
         props.parentCallback(num);
         setShow(true);
       });
-      navigate("/profile")
+      setTimeout(() => {navigate("/profile"); }, 2000);
   }
 
   function showpass() {

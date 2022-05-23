@@ -3,11 +3,11 @@ import "./App.css";
 import React, {Component , useState}  from 'react';
 import { Routes, Route,BrowserRouter as Router } from "react-router-dom";
 import Recommendations from './Pages/Recommendations/Recommendations';
-import Add_Exercises from "./Add_Exercises";
+import Add_Exercises from "./Pages/Add_Exercises/Add_Exercises";
 import Profile from "./Pages/Profile/Profile";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
-
+import Quiz from "./Components/Quiz/Quiz"
 
 /*
 <Route exact path="/" component={Recommendations} />
@@ -78,6 +78,7 @@ class App extends Component {
         <Route exact path="/profile" element={<Profile id = {this.state.id}/>} />
         <Route exact path="/register" element={<Register id = {this.state.id} setId = {this.setId}/>} />
         <Route exact path="/Recommendations" element={<Recommendations id = {this.state.id}/>} />
+        <Route exact path="/Quiz" element={<Quiz id = {this.state.id}/>} />
       </Routes>
     </div>
   );

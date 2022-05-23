@@ -108,7 +108,7 @@ function Profile(props) {
 
                         <div className='Category'>
                           <label>
-                            Enter Exercise Category:
+                            Enter Exercise Category: 
                             <select className='selected' onChange={e => setExerciseCategory(e.target.value)}>
                               <option value="Strength">Strength</option>
                               <option value="Flexibility">Flexibility</option>
@@ -141,7 +141,7 @@ function Profile(props) {
                           
                         </div>
 
-                      <input type="submit" value="Submit"></input>
+                      <input class = "from_submit"type="submit" value="Submit"></input>
                     </form>
                 </div>      
               </div>

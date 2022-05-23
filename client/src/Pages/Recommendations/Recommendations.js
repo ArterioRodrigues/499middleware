@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-
 import { Link } from "react-router-dom";
 import Nav from '../../Components/NavBar/NavBar'
-
+import './Recommendations.css'
 
 function Recommendations(props) {
   const [backendData, setBackendData] = useState([{}])
@@ -298,90 +297,93 @@ function Recommendations(props) {
   });
   })*/
   return (
-    <div>
+    <div className='Background'>
       
 
       <Nav></Nav>
-      <h1> Recommendations</h1>
-      <br/>
-      <br/>
-      
-      <form onSubmit={HandleSubmit}>
-        <br/>
-        <label>
-          Enter exercise: <input type="text" onChange={e => setNum2(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Choose wether or not to use inputted weights:<br/>
-          If no,all categories will be weighted the same<br />
-          If yes, will use inputtsed weights, must add up to 100<br />
-          <select onChange={e => setNum16(e.target.value)}>
-            <option value="No">No, do not use inputted weights</option>
-            <option value="Yes">Yes, use inputted weights</option>
-          </select>
-        </label>
-        <br/>
-        <br/>
-        <label>
-          Pick your preference:
-          <br />
-          <label >Target Area</label><input type="checkbox" value="Target Area"  onChange={e => handleCheckOne(e.target.value)}/>
+      <div className='Recommend_Contents Card'>
+        <h1 class = "Title"> Recommendations</h1>
+        
+        <div>
+          <form onSubmit={HandleSubmit}>
+            
+            <input style = {{margin: 0}}className = 'login-menu username' type="text" placeholder = 'Enter Exercise:'onChange={e => setNum2(e.target.value)} />
+            <br/>
+            
+            <p className='text'>
+              Choose wether or not to use inputted weights:<br/>
+              If no,all categories will be weighted the same<br />
+              If yes, will use inputtsed weights, must add up to 100<br />
+            </p>
 
-          <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum10(e.target.value)} /><br />
-           
-          <label>Target Muscle </label><input type="checkbox" value="Target Muscle" onChange={e => handleCheckOne(e.target.value)}/>
-          <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum11(e.target.value)}/><br />
+              <select className='selected' onChange={e => setNum16(e.target.value)}>
+                <option value="No">No, do not use inputted weights</option>
+                <option value="Yes">Yes, use inputted weights</option>
+              </select>
+            
+            <br/>
+            <br/>
+            <label>
+              <strong>Pick your preference:</strong>
+              <br />
+              
+                <label >Target Area</label><input type="checkbox" value="Target Area"  onChange={e => handleCheckOne(e.target.value)}/>
 
-          <label>Exercise Category</label><input type="checkbox" value="Exercise Category" onChange={e => handleCheckOne(e.target.value)}/>
-          <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum12(e.target.value)} /><br />
+                <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum10(e.target.value)} /><br />
+                
+                <label>Target Muscle </label><input type="checkbox" value="Target Muscle" onChange={e => handleCheckOne(e.target.value)}/>
+                <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum11(e.target.value)}/><br />
 
-          <label>Movement: Push,Pull,Strech, or Aerobic  </label> <input type="checkbox" value="Movement" onChange={e => handleCheckOne(e.target.value)}/>
-          <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum13(e.target.value)}/><br />
+                <label>Exercise Category</label><input type="checkbox" value="Exercise Category" onChange={e => handleCheckOne(e.target.value)}/>
+                <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum12(e.target.value)} /><br />
 
-          <label>Difficulty</label><input type="checkbox" value="Difficulty" onChange={e => handleCheckOne(e.target.value)}/>
-          <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum14(e.target.value)}/><br />
+                <label>Movement: Push,Pull,Strech, or Aerobic  </label> <input type="checkbox" value="Movement" onChange={e => handleCheckOne(e.target.value)}/>
+                <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum13(e.target.value)}/><br />
 
-          <label>Location </label><input type="checkbox" value="Location" onChange={e => handleCheckOne(e.target.value)}/>
-          <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum15(e.target.value)}/><br />
+                <label>Difficulty</label><input type="checkbox" value="Difficulty" onChange={e => handleCheckOne(e.target.value)}/>
+                <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum14(e.target.value)}/><br />
 
-        </label> 
+                <label>Location </label><input type="checkbox" value="Location" onChange={e => handleCheckOne(e.target.value)}/>
+                <label style={{ paddingLeft: '15px' }} > Weight:</label><input type="number" min = '0'  max = '100' step = '1' onChange={e => setNum15(e.target.value)}/><br />
+              
+            </label> 
 
-        <br />
-        <label>
-          Choose your template:
-          <select onChange={e => setNum19(e.target.value)}>
-            <option value = '1'>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </label>
-        <br />
+            <br />
+            <label>
+              Choose your template:
+              <select onChange={e => setNum19(e.target.value)}>
+                <option value = '1'>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+            <br />
 
-        <label>
-          Choose your day:
-          <select onChange={e => setNum17(e.target.value)}>
-            <option value = '1'>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </label>
-        <br />
+            <label>
+              Choose your day:
+              <select onChange={e => setNum17(e.target.value)}>
+                <option value = '1'>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+            <br />
 
-        <input type="submit" value="Submit"></input>
+            <input className='Login_1' type="submit" value="Submit"></input>
 
 
-      </form>
-      
-      {(typeof sum.sum === 'undefined') ? (
-        <p></p>
-      ) : (
-        sum.sum.map((val, i) => (
-          <p key={i}>{val}</p>
-        ))
-      )}
+          </form>
+        </div>
+        {(typeof sum.sum === 'undefined') ? (
+          <p></p>
+        ) : (
+          sum.sum.map((val, i) => (
+            <p key={i}>{val}</p>
+          ))
+        )}
+      </div>
     </div>
   )
 }
