@@ -53,7 +53,7 @@ const questions=
       img: "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png"
     },
     {
-      id: [3,3],
+      id: [3,4],
       description : "Special",
       img: "https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png"
     }
